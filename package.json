@@ -1,0 +1,50 @@
+{
+  "name": "ui-tool",
+  "version": "0.0.1",
+  "description": "一些常用的UI 组件 tost alert confirm model-list",
+  "main": "main.js",
+  "scripts": {
+    "start": "NODE_ENV=dev webpack-dev-server --open -d --inline --config webpack.config.js",
+    "debug": "NODE_ENV=debug webpack --config webpack.config.js && http-server",
+    "test": "NODE_ENV=test webpack --config webpack.config.js",
+    "pre": "NODE_ENV=pre webpack --config webpack.config.js",
+    "build": "NODE_ENV=production webpack --progress --profile --color --config webpack.config.js",
+    "lint": "eslint --ext .js, src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:linfeng008/UITool.git"
+  },
+  "author": "linfeng.c",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "crypto-js": "^3.1.9-1",
+    "fastclick": "^1.0.6",
+    "moment": "^2.19.3"    
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "less-loader": "^4.0.5",
+    "node-gyp": "^3.6.2",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "postcss-px2rem": "^0.3.0",
+    "precss": "^2.0.0",
+    "px2rem-loader": "^0.1.7",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",    
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.5"
+  },
+  "license": "Apache Licence 2.0"
+}

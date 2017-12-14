@@ -1,0 +1,189 @@
+/// rem基准值
+$rem-base: 750 / 10 /2;
+
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function dp2rem($dp) {
+  @if unit($dp) == rem { //返回一个值的单位;    
+    @return $dp;
+  }
+  @else {
+    @return strip-units($dp) / $rem-base * 1rem;
+  }
+}
+
+@mixin dp2rem($k, $v) {
+  #{$k}: dp2rem($v);
+}
+
+// 快捷方式
+@mixin font-size($v) {  
+  @include dp2rem(font-size, $v);
+}
+
+@mixin width($v) {
+  @include dp2rem(width, $v);
+}
+
+@mixin height($v) {
+  @include dp2rem(height, $v);
+}
+
+@mixin line-height($v) {
+  @include dp2rem(line-height, $v);
+}
+
+@mixin min-width($v) {
+  @include dp2rem(min-width, $v);
+}
+
+@mixin max-width($v) {
+  @include dp2rem(max-width, $v);
+}
+
+@mixin min-height($v) {
+  @include dp2rem(min-width, $v);
+}
+
+@mixin max-height($v) {
+  @include dp2rem(max-width, $v);
+}
+
+@mixin top($v) {
+  @include dp2rem(top, $v);
+}
+
+@mixin right($v) {
+  @include dp2rem(right, $v);
+}
+
+@mixin bottom($v) {
+  @include dp2rem(bottom, $v);
+}
+
+@mixin left($v) {
+  @include dp2rem(left, $v);
+}
+
+@mixin padding-top($v) {
+  @include dp2rem(padding-top, $v);
+}
+
+@mixin padding-right($v) {
+  @include dp2rem(padding-right, $v);
+}
+
+@mixin padding-bottom($v) {
+  @include dp2rem(padding-bottom, $v);
+}
+
+@mixin padding-left($v) {
+  @include dp2rem(padding-left, $v);
+}
+
+@mixin padding($pt: 0, $pr: $pt, $pb: $pt, $pl: $pr) {
+  padding: dp2rem($pt) dp2rem($pr) dp2rem($pb) dp2rem($pl);
+}
+
+@mixin margin-top($v) {
+  @include dp2rem(margin-top, $v);
+}
+
+@mixin margin-right($v) {
+  @include dp2rem(margin-right, $v);
+}
+
+@mixin margin-bottom($v) {
+  @include dp2rem(margin-bottom, $v);
+}
+
+@mixin margin-left($v) {
+  @include dp2rem(margin-left, $v);
+}
+
+@mixin margin($mt: 0, $mr: $mt, $mb: $mt, $ml: $mr) {
+  margin: dp2rem($mt) dp2rem($mr) dp2rem($mb) dp2rem($ml);
+}
+
+@mixin border-radius($v) {
+  @include dp2rem(border-radius, $v);
+}
+
+@mixin border-top-left-radius($v) {
+  @include dp2rem(border-top-left-radius, $v);
+}
+
+@mixin border-top-right-radius($v) {
+  @include dp2rem(border-top-right-radius, $v);
+}
+
+@mixin border-bottom-right-radius($v) {
+  @include dp2rem(border-bottom-right-radius, $v);
+}
+
+@mixin border-bottom-left-radius($v) {
+  @include dp2rem(border-bottom-left-radius, $v);
+}
+
+
+@mixin border($Bwidth,$Bstyle,$Bcolor){
+  border: $Bwidth $Bstyle $Bcolor; /*no*/
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border: $Bwidth/2 $Bstyle $Bcolor; /*no*/
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    border: $Bwidth/3 $Bstyle $Bcolor; /*no*/
+  }
+}
+
+@mixin border-top($Bwidth,$Bstyle,$Bcolor){
+  border-top: $Bwidth $Bstyle $Bcolor; /*no*/
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border-top: $Bwidth/2 $Bstyle $Bcolor; /*no*/
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    border-top: $Bwidth/3 $Bstyle $Bcolor; /*no*/
+  }
+}
+
+@mixin border-right($Bwidth,$Bstyle,$Bcolor){
+  border-right: $Bwidth $Bstyle $Bcolor; /*no*/
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border-right: $Bwidth/2 $Bstyle $Bcolor; /*no*/
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    border-right: $Bwidth/3 $Bstyle $Bcolor; /*no*/
+  }
+}
+
+@mixin border-bottom($Bwidth,$Bstyle,$Bcolor){
+  border-bottom: $Bwidth $Bstyle $Bcolor;/*no*/
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border-bottom: $Bwidth/2 $Bstyle $Bcolor;/*no*/
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    border-bottom: $Bwidth/3 $Bstyle $Bcolor;/*no*/
+  }
+}
+
+@mixin border-left($Bwidth,$Bstyle,$Bcolor){
+  border-left: $Bwidth $Bstyle $Bcolor;/*no*/
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border-left: $Bwidth/2 $Bstyle $Bcolor;/*no*/
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    border-left: $Bwidth/3 $Bstyle $Bcolor;/*no*/
+  }
+}
