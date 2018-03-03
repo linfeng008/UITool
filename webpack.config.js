@@ -30,10 +30,7 @@ let plugins = [
 
 if (DEV == 'production') {
   plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comment: false,
-      },
+    new webpack.optimize.UglifyJsPlugin({      
       compress: {
         warnings: false,
         drop_console: true,
