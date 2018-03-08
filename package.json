@@ -1,8 +1,8 @@
 {
   "name": "ui-tool",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "一些常用的UI 组件 tost alert confirm model-list",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev webpack-dev-server --open -d --inline --config webpack.config.js",
     "debug": "NODE_ENV=debug webpack --config webpack.config.js && http-server",
