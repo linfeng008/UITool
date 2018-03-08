@@ -1,6 +1,6 @@
 {
   "name": "ui-tool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一些常用的UI 组件 tost alert confirm model-list",
   "main": "main.js",
   "scripts": {
