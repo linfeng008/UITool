@@ -4,7 +4,9 @@
  */
 
 
-import '../style/index.scss';
+//import '../style/index.scss';
+
+
 class UITool {
   constructor() {
     this.timeout = null;
@@ -195,4 +197,4 @@ class UITool {
   //加banner弹窗
 
 };
-export default new UITool();
+export default UITool;
