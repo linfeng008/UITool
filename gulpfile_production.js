@@ -42,7 +42,7 @@ gulp.task('styles', function(){
 gulp.task('scripts',function(){
   return gulp.src('./src/script/index.js')  
   .pipe(babel())
-  .pipe(uglify())  
+  .pipe(uglify())
   .pipe(rename({
     'suffix':'.min'
   }))  
