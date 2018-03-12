@@ -1,8 +1,8 @@
 {
   "name": "ui-tool",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "一些常用的UI 组件 tost alert confirm model-list",
-  "main": "mian.js",
+  "main": "main.js",
   "files": [
     "build",
     "main.js",
